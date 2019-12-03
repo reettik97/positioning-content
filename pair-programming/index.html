@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/main.css">
+    <title>pair-programming</title>
+</head>
+
+<body class="background-color-body">
+    <div class="container">
+        <h2 class="main-header">Side-By-Side Positioning Demo</h2>
+        <div class="extra-padding">
+            <div class="inline-block-box element-to-top">
+                <p>these two divs are positioned next to one
+                    another using display: inline-block
+                </p>
+            </div>
+            <div class="inline-block-box">
+                <p>Notice the space between them. It occurs because
+                    of my carriage return in the HTML
+                    which I've used to keep the code organized.
+                    I've used a reset to insure no element
+                    should have any default margins or padding.
+                    (I did add a bottom margin to make it easier
+                    to read.) This space is actually a space
+                    character rendered just as it would
+                    between two inline elements.
+                </p>
+            </div>
+        </div>
+
+        <div class="extra-padding clearfix">
+            <div class="inline-block-box float-left">
+                <p>these two are positioned using : float:left.
+                </p>
+            </div>
+            <div class="inline-block-box float-left">You can see that, even though the elements
+                    are spaced in the code. the space is not
+                    actually rendered on the page. This rnay not be a
+                    a huge deal in these first examples, but.„
+                    </div>
+        </div>
+
+        <div class="extra-padding">
+            <div class="give-width-50p inline-block-box">
+                <p>If I do the same thing with floated elements...
+                    </p>
+            </div>
+            <div class="give-width-50p inline-block-box">
+                <p>the two elements are side-by-side just as I
+                        intended and fill the entire width of the parent
+                        (which, in this case, is the same as the width of
+                        the viewport.
+                        </p>
+            </div>
+        </div>
+
+        <div class="extra-padding clearfix">
+            <div class="give-width-50p inline-block-box float-left">
+                <p>What if I want my side-by-side elements to take
+                        up the full width of the parent element? I can set
+                        the width of each to 50%. right?
+                        </p>
+            </div>
+            <div class="give-width-50p inline-block-box float-left">
+                <p>Wrong! Because. together. the two inline block
+                        elements will add up to 100% of the available
+                        width, but that doesn't account for the space
+                        between.
+                        </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
